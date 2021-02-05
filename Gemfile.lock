@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: ecb65d2d4ea7b381472e3084f45e2da94e00ce91
+  branch: main
+  specs:
+    rspec-core (3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: bd10f0cf3970932781efcd09b5e427877d16a6c2
+  branch: main
+  specs:
+    rspec-expectations (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: eadd0e63ce4522cad191e9034dc0f877b11abd4d
+  branch: main
+  specs:
+    rspec-mocks (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 89a9e1e24ee90744f8b6e6d7ea8ecb1a810e2cc8
+  branch: main
+  specs:
+    rspec-rails (4.1.0.pre)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (= 3.11.0.pre)
+      rspec-expectations (= 3.11.0.pre)
+      rspec-mocks (= 3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: d04c8aef72d030fc354902f1e1b486b5c21e0732
+  branch: main
+  specs:
+    rspec-support (3.11.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,12 +103,20 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    bcrypt (3.1.16)
     bootsnap (1.7.1)
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    devise (4.7.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    diff-lcs (1.4.4)
     erubi (1.10.0)
     ffi (1.14.2)
     globalid (0.4.2)
@@ -86,6 +141,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     puma (4.3.7)
       nio4r (~> 2.0)
@@ -125,6 +181,10 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
+    rspec (1.3.2)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -140,22 +200,32 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  devise
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.4)
+  rspec
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
